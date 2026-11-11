@@ -1,0 +1,154 @@
+.customize-container {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.customize-container h2 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.customize-description {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.customize-table {
+  width: 50%;
+  margin: auto;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.customize-row {
+  display: grid;
+  grid-template-columns: 40% 35% 25%;
+  min-height: 55px;
+  border-bottom: 1px solid #ddd;
+}
+
+.customize-image-box {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.customize-image-box img {
+  width: 70px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.customize-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-right: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.customize-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.customize-action span {
+  color: orange;
+}
+
+.customize-total {
+  text-align: left;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: navy;
+}
+
+.customize-button-box {
+  padding: 12px;
+}
+
+.customize-button-box button {
+  padding: 8px 16px;
+  border: 2px solid orange;
+  background: black;
+  color: orange;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.customize-button-box button:hover {
+  background: orange;
+  color: black;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .customize-table {
+    width: 75%;
+  }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+  .customize-table {
+    width: 95%;
+  }
+
+  .customize-row {
+    grid-template-columns: 35% 40% 25%;
+  }
+
+  .customize-image-box {
+    padding-left: 8px;
+  }
+
+  .customize-image-box img {
+    width: 55px;
+    height: 38px;
+  }
+
+  .customize-info {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .customize-action {
+    gap: 6px;
+  }
+
+  .customize-total {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .customize-description {
+    color: var(--text);
+  }
+
+  .customize-table {
+    background: var(--code-bg);
+    border-color: var(--border);
+  }
+
+  .customize-row,
+  .customize-image-box,
+  .customize-info {
+    border-color: var(--border);
+  }
+
+  .customize-info {
+    color: var(--text-h);
+  }
+
+  .customize-total {
+    color: #7eb8ff;
+  }
+}

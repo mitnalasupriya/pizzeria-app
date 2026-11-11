@@ -1,0 +1,285 @@
+.order-container {
+  width: 96%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.pizza-card {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.pizza-info {
+  display: flex;
+  width: 100%;
+  padding: 18px;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pizza-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pizza-middle {
+  flex: 2.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.pizza-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pizza-left h2 {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.type-box {
+  width: 18px;
+  height: 18px;
+  margin: 5px 0;
+}
+
+.veg {
+  background: green;
+}
+
+.nonveg {
+  background: red;
+}
+
+.pizza-left h3 {
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+.pizza-rating {
+  color: orange;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pizza-middle p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+  word-break: break-word;
+}
+
+.view-review-btn {
+  margin-top: auto;
+  width: fit-content;
+  padding: 8px 14px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-review-btn:hover {
+  background: #000;
+}
+
+.pizza-right img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.pizza-right > button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+  background: #f4a621;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pizza-right > button:hover {
+  background: #e39a18;
+}
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.quantity-box button {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4a621;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+
+.quantity-box span {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .order-container {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+
+  .pizza-right img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .order-container {
+    width: 98%;
+  }
+
+  .pizza-info {
+    flex-direction: row;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .pizza-left {
+    flex: 1;
+  }
+
+  .pizza-middle {
+    flex: 2;
+  }
+
+  .pizza-right {
+    flex: 1;
+  }
+
+  .pizza-left h2 {
+    font-size: 15px;
+  }
+
+  .pizza-left h3 {
+    font-size: 18px;
+  }
+
+  .pizza-middle p {
+    font-size: 13px;
+  }
+
+  .pizza-right img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .pizza-right button {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .quantity-box {
+    gap: 10px;
+  }
+
+  .quantity-box button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .quantity-box span {
+    font-size: 15px;
+  }
+  .view-review-btn {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .pizza-info {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .pizza-left h2 {
+    font-size: 14px;
+  }
+
+  .pizza-left h3 {
+    font-size: 16px;
+  }
+
+  .pizza-middle p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .pizza-right img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pizza-right button {
+    font-size: 12px;
+    padding: 7px 8px;
+  }
+
+  .quantity-box button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .quantity-box span {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .pizza-card {
+    background: var(--code-bg);
+    border-color: var(--border);
+  }
+
+  .pizza-left h2,
+  .pizza-left h3,
+  .pizza-middle p,
+  .quantity-box span {
+    color: var(--text-h);
+  }
+
+  .pizza-right img {
+    border-color: var(--border);
+  }
+}
